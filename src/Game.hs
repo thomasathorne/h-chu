@@ -91,7 +91,7 @@ trickLoop 4 = do
           m <- sAtom $ nextInPlayer 0
           trickLoop m
 trickLoop n = do 
- tell You $ "It is your turn. " ++ show n
+ tell You $ "It is your turn. "
  p <- trickRace doPlay bombListeners
  outCheck 
  m <- sAtom $ nextInPlayer $ if p == Play Single [] then n else 0
